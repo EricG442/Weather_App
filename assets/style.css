@@ -1,0 +1,48 @@
+.container {
+    height: 500px;
+}
+
+.tile.is-ancestor {
+    height: 100%;
+}
+
+.block {
+    height: 50%;
+}
+
+.tile.is-parent {
+    height: 100%;
+    border: solid 2px blue;
+}
+
+.tile.is-parent .tile.is-child {
+    border: solid 2px red;
+}
+
+.block:last-child .tile {
+    height: 100%;
+    border: solid 2px green;
+}
+
+.tile.is-child.is-3 {
+    margin-right: 24px !important;
+}
+
+.tile.is-child .level {
+    height: 100%;
+}
+
+.tile.is-child .level .level-item {
+    height: 100%;
+    max-width: 262px;
+}
+
+.level-item.has-text-centered div.currentWeather {
+    border: solid 2px purple;
+    height: 150px;
+    width: 175px;
+}
+
+.tile.is-child.is-3 .field.has-addons {
+    justify-content: center;
+}

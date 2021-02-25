@@ -1,0 +1,93 @@
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel='stylesheet' href='./assets/style.css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Weather Boi 2.1</title>
+    </head>
+    <body>
+        <section class='hero is-fullheight'>
+            <div class='hero-head'>
+                <nav class='navbar'>
+                    <div class='navbar-brand'>
+                        <div class='navbar-burger'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class='navbar-menu'>
+                        <div class='navbar-end'>
+                            <a class='navbar-item'>Home</a>
+                            <a class='navbar-item'>Something</a>
+                            <a class='navbar-item'>Something Else</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class='hero-body'>
+                <div class='container is-widescreen is-fluid'>
+                    <div class='tile is-ancestor is-vertical' id='tile_container'>
+                        
+                        <div class='block'>
+                            <div class='tile is-parent'>
+                                
+                                <div class='tile is-child is-3'>
+                                    <div class='field has-addons'>
+                                        <div class='control'>
+                                            <input class='input' type='text' placeholder='Search' id='userInput'>
+                                        </div>
+                                        <div class='control'>
+                                            <button class='button is-link' id='searchButton'>Search</button>
+                                        </div>
+                                    </div>
+
+                                    <div class='field'>
+                                        <div class='control' id='buttonCont'></div>
+                                    </div>
+                                </div>
+                                
+                                <div class='tile is-child'>
+                                    <nav class='level'>
+                                        <div class='level-item has-text-centered'>
+                                            <div class='currentWeather'>
+                                                Weather data goes here
+                                            </div>
+                                        </div>
+                                        <div class='level-item has-text-centered'>
+                                            <div class='currentWeather'></div>
+                                        </div>
+                                        <div class='level-item has-text-centered'>
+                                            <div class='currentWeather'></div>
+                                        </div>
+                                        <div class='level-item has-text-centered'>
+                                            <div class='currentWeather'></div>
+                                        </div>
+                                        <div class='level-item has-text-centered'>
+                                            <div class='currentWeather'></div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='block'>
+                            <div class='tile' id='fuckMeiCantuseCSS'>
+                                Another type of forecast to render to the web page
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class='hero-foot'></div>
+        </section>
+
+        <script type='text/javascript' src='./assets/script.js'></script>
+    </body>
+</html>
