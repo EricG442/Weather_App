@@ -39,10 +39,18 @@
 
 .level-item.has-text-centered div.currentWeather {
     border: solid 2px purple;
-    height: 150px;
+    height: 190px;
     width: 175px;
 }
 
 .tile.is-child.is-3 .field.has-addons {
     justify-content: center;
+}
+
+.currentWeather div {
+    height: 25%;
+}
+
+.currentWeather p {
+    height: 25%;
 }

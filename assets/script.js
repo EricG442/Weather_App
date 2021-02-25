@@ -53,7 +53,19 @@ const main = (res) => {
             hour = hour % 12;
             hour  = hour ? hour : 12;
 
-        console.log(hour, ampm);
+        let temp = Math.floor(array[i].temp),
+            descrip = array[i].weather[0].description,
+            iconURL = 'https://openweathermap.org/img/wn/';
+        
+        let index = i + 1,
+            id = `#weatherContainer${index}`;
+        iconURL += array[i].weather[0].icon + '.png';
+
+        $(`${id} div:nth-child(1)`).children().attr('src', iconURL);
+        $(`${id} p:nth-child(2)`).text(`${hour} ${ampm}`);
+        $(`${id} p:nth-child(3)`).text(`${temp}° F`);
+        $(`${id} p:nth-child(4)`).text(descrip);
+        
     }
 }
 
