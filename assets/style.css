@@ -54,3 +54,38 @@
 .currentWeather p {
     height: 25%;
 }
+
+#wkForecastContainer {
+    width: 100%;
+}
+
+#wkForecastContainer {
+    width: 100%;
+}
+
+#wkForecastContainer .level-item {
+    height: 100%;
+}
+
+#wkForecastContainer .level-item .currentForecast {
+    height: 200px;
+    width: 220px;
+    border: solid 2px orange;
+}
+
+.currentForecast .forecastIMG {
+    height: 50%;
+}
+
+.currentForecast .forecastHeader {
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.currentForecast div .level {
+    height: 35px;
+}
+
+.levelContainer .level-item .subtitle.is-5 {
+    font-weight: bold;
+}

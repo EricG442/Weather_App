@@ -67,7 +67,43 @@ const main = (res) => {
         $(`${id} p:nth-child(4)`).text(descrip);
         
     }
+
+    return res.daily;
 }
+
+const renderForecast = (response) => {
+    
+    for(let i = 1; i < 8; i++) {
+        let array = response[i],
+            timestamp = array.dt * 1000,
+            date = new Date(timestamp),
+            monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            daysArray = ['Sun', 'Mon', 'Tue', 'Wed', 'Thus', 'Fri', 'Sat'],
+            newDate = `${monthsArray[date.getMonth()]} ${date.getDate()} ${daysArray[date.getDay()]}`,
+            descrip = array.weather[0].description,
+            min = Math.floor(array.temp.min),
+            max = Math.floor(array.temp.max);
+
+        let containerID = `#forecastContainer${i}`,
+            iconURL = 'https://openweathermap.org/img/wn/';
+        
+        let imgElem = $(containerID).children(':first-child').children(),
+            headerContainer = $(containerID).children('.forecastHeader'),
+            levelContainer = $(containerID).children('.levelContainer'),
+            header1 = headerContainer.children(':first-child'),
+            header2 = headerContainer.children(':last-child'),
+            minContainer = levelContainer.children().children(':first-child').children(),
+            maxContainer = levelContainer.children().children(':last-child').children();
+
+        iconURL += array.weather[0].icon + '.png';
+        imgElem.attr('src', iconURL);
+        header1.text(newDate);
+        header2.text(descrip);
+        minContainer.text(`${min}° F`);
+        maxContainer.text(`${max}° F`);
+
+    }
+};
 
 const addButton = () => {
     let userQuery = input.value;
@@ -81,7 +117,8 @@ const addButton = () => {
 search.addEventListener('click', () => { 
     getRequest1
         .then(res => getRequest2(res))
-        .then(res => main(res));
+        .then(res => main(res))
+        .then(res => renderForecast(res));
 
     addButton();
 });
