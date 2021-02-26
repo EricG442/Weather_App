@@ -12,7 +12,6 @@
 
 .tile.is-parent {
     height: 100%;
-    border: solid 2px blue;
 }
 
 .tile.is-parent .tile.is-child {
@@ -21,7 +20,6 @@
 
 .block:last-child .tile {
     height: 100%;
-    border: solid 2px green;
 }
 
 .tile.is-child.is-3 {
@@ -83,9 +81,13 @@
 }
 
 .currentForecast div .level {
-    height: 35px;
+    height: 30px;
 }
 
 .levelContainer .level-item .subtitle.is-5 {
     font-weight: bold;
+}
+
+.minMaxContainer {
+    height: 25px;
 }
