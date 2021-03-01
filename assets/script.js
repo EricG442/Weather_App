@@ -2,21 +2,25 @@ let buttonContainer = document.getElementById('buttonCont');
 let search = document.getElementById('searchButton');
 let input = document.getElementById('userInput');
 let apiID = 'a3a448809ba0d58d24883ea16e8349fb';
+let query = input.value;
 
-let getRequest1 = new Promise((resolve, reject) => {
-    let baseURL = 'https://api.openweathermap.org/data/2.5/weather?';
-    
-    let params = $.param({
-        q: input.value,
-        appid: apiID
-    });
 
-    $.ajax({
-        method: 'GET',
-        url: baseURL + params
+const func = (input) => {
+    let apiURL = 'https://api.openweathermap.org/data/2.5/weather?'
+
+    return new Promise((resolve, reject) => {
+        let params = $.param({
+            q: input,
+            appid: apiID
+        });
+
+        $.ajax({
+            method: 'GET',
+            url: apiURL + params
+        })
+        .then(res => {resolve(res.coord)})
     })
-    .then(res => {resolve(res.coord)})
-})
+}
 
 const getRequest2 = (res) => {
     let long = res.lon,
@@ -105,9 +109,8 @@ const renderForecast = (response) => {
     }
 };
 
-const addButton = () => {
-    let userQuery = input.value;
-    
+const addButton = (userQuery) => {
+
     let newButton = document.createElement('button');
     newButton.className = 'button is-link';
     newButton.innerHTML = userQuery;
@@ -115,10 +118,13 @@ const addButton = () => {
 };
 
 search.addEventListener('click', () => { 
-    getRequest1
+    let searchQuery = input.value;
+
+    func(searchQuery)
         .then(res => getRequest2(res))
         .then(res => main(res))
-        .then(res => renderForecast(res));
+        .then(res => renderForecast(res))
+        .catch(err => console.log(err));
 
-    addButton();
+    addButton(searchQuery);
 });
