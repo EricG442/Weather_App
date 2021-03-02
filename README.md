@@ -17,11 +17,10 @@ No installation required to use this application
 Provide, in the input form, the name of any City to find the current and seven day forecast 
 
 ## License
-MIT idk something like that
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Contributing
 Just Me, Myself and I for now
 
 ## Questions
-You can take it up with my butt because hes the only one who gives a crap!
+Have any questions? You can email me at ericg206@outlook.com

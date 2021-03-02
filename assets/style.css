@@ -14,10 +14,6 @@
     height: 100%;
 }
 
-.tile.is-parent .tile.is-child {
-    border: solid 2px red;
-}
-
 .block:last-child .tile {
     height: 100%;
 }
@@ -90,4 +86,14 @@
 
 .minMaxContainer {
     height: 25px;
+}
+
+.currentWeather {
+    border-radius: 10px;
+    background-color: rgb(110, 110, 110);
+}
+
+.currentForecast {
+    border-radius: 10px;
+    background-color: rgb(110,110,110);
 }

@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
         <link rel='stylesheet' href='./assets/style.css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <title>Weather Boi 2.1</title>
+        <title>Weather2.1</title>
     </head>
     <body>
         <section class='hero is-fullheight'>
@@ -29,14 +29,15 @@
                 </nav>
             </div>
 
-            <div class='hero-body'>
+            <div class='hero-body has-background-info-dark'>
                 <div class='container is-widescreen is-fluid'>
                     <div class='tile is-ancestor is-vertical' id='tile_container'>
                         
                         <div class='block'>
                             <div class='tile is-parent'>
                                 
-                                <div class='tile is-child is-3'>
+                                <!-- Container which holds the first tile with the search form -->
+                                <div class='tile notification is-child is-3'>
                                     <div class='field has-addons'>
                                         <div class='control'>
                                             <input class='input' type='text' placeholder='Search' id='userInput'>
@@ -51,7 +52,8 @@
                                     </div>
                                 </div>
                                 
-                                <div class='tile is-child'>
+                                <!-- Second tile which holds elements to display the response data within -->
+                                <div class='tile notification is-child'>
                                     <nav class='level'>
                                         <div class='level-item has-text-centered'>
                                             <div class='currentWeather' id='weatherContainer1'>
@@ -99,7 +101,9 @@
                         </div>
 
                         <div class='block'>
-                            <div class='tile'>
+                            
+                            <!-- Last tile which holds all the elements to display data from the second response -->
+                            <div class='tile notification'>
                                 <nav class='level'  id='wkForecastContainer'>
                                     
                                     <div class='level-item has-text-centered'>
