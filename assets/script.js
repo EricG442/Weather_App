@@ -109,10 +109,21 @@ const renderForecast = (response) => {
     }
 };
 
+const getWeather = (cityName) => {
+    func(cityName)
+        .then(res => getRequest2(res))
+        .then(res => main(res))
+        .then(res => renderForecast(res))
+        .catch(err => console.log(err));
+};
+
 const addButton = (userQuery) => {
 
     let newButton = document.createElement('button');
     newButton.className = 'button is-link';
+    newButton.onclick = () => {
+        getWeather(newButton.innerHTML);
+    };
     newButton.innerHTML = userQuery;
     buttonContainer.appendChild(newButton);
 };
@@ -120,11 +131,7 @@ const addButton = (userQuery) => {
 search.addEventListener('click', () => { 
     let searchQuery = input.value;
 
-    func(searchQuery)
-        .then(res => getRequest2(res))
-        .then(res => main(res))
-        .then(res => renderForecast(res))
-        .catch(err => console.log(err));
+    getWeather(searchQuery);
 
     addButton(searchQuery);
 });
