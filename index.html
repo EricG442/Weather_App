@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
         <link rel='stylesheet' href='./assets/style.css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <title>Weather2.1</title>
+        <title>Weather App</title>
     </head>
     <body>
         <section class='hero is-fullheight'>
@@ -22,8 +22,8 @@
                     <div class='navbar-menu'>
                         <div class='navbar-end'>
                             <a class='navbar-item'>Home</a>
-                            <a class='navbar-item'>Something</a>
-                            <a class='navbar-item'>Something Else</a>
+                            <a class='navbar-item'>Github</a>
+                            <a class='navbar-item'>Contact Me</a>
                         </div>
                     </div>
                 </nav>
@@ -48,7 +48,9 @@
                                     </div>
 
                                     <div class='field'>
-                                        <div class='control' id='buttonCont'></div>
+                                        <div class='control' id='buttonCont'>
+
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -56,7 +58,7 @@
                                 <div class='tile notification is-child'>
                                     <nav class='level'>
                                         <div class='level-item has-text-centered'>
-                                            <div class='currentWeather' id='weatherContainer1'>
+                                            <div class='currentWeather has-background-info-dark' id='weatherContainer1'>
                                                 <div><img></div>
                                                 <p class='subtitle is-6'></p>
                                                 <p class='subtitle is-6'></p>
@@ -64,7 +66,7 @@
                                             </div>
                                         </div>
                                         <div class='level-item has-text-centered'>
-                                            <div class='currentWeather' id='weatherContainer2'>
+                                            <div class='currentWeather has-background-info-dark' id='weatherContainer2'>
                                                 <div><img></div>
                                                 <p class='subtitle is-6'></p>
                                                 <p class='subtitle is-6'></p>
@@ -72,7 +74,7 @@
                                             </div>
                                         </div>
                                         <div class='level-item has-text-centered'>
-                                            <div class='currentWeather' id='weatherContainer3'>
+                                            <div class='currentWeather has-background-info-dark' id='weatherContainer3'>
                                                 <div><img></div>
                                                 <p class='subtitle is-6'></p>
                                                 <p class='subtitle is-6'></p>
@@ -80,7 +82,7 @@
                                             </div>
                                         </div>
                                         <div class='level-item has-text-centered'>
-                                            <div class='currentWeather' id='weatherContainer4'>
+                                            <div class='currentWeather has-background-info-dark' id='weatherContainer4'>
                                                 <div><img></div>
                                                 <p class='subtitle is-6'></p>
                                                 <p class='subtitle is-6'></p>
@@ -88,7 +90,7 @@
                                             </div>
                                         </div>
                                         <div class='level-item has-text-centered'>
-                                            <div class='currentWeather' id='weatherContainer5'>
+                                            <div class='currentWeather has-background-info-dark' id='weatherContainer5'>
                                                 <div><img></div>
                                                 <p class='subtitle is-6'></p>
                                                 <p class='subtitle is-6'></p>
@@ -107,7 +109,7 @@
                                 <nav class='level'  id='wkForecastContainer'>
                                     
                                     <div class='level-item has-text-centered'>
-                                        <div class='currentForecast' id='forecastContainer1'>
+                                        <div class='currentForecast has-background-info-dark' id='forecastContainer1'>
                                             <div class='forecastIMG'><img></div>
                                             
                                             <div class='forecastHeader'>
@@ -140,7 +142,7 @@
                                     </div>
 
                                     <div class='level-item has-text-centered'>
-                                        <div class='currentForecast' id='forecastContainer2'>
+                                        <div class='currentForecast has-background-info-dark' id='forecastContainer2'>
                                             <div class='forecastIMG'><img></div>
                                             
                                             <div class='forecastHeader'>
@@ -173,7 +175,7 @@
                                     </div>
 
                                     <div class='level-item has-text-centered'>
-                                        <div class='currentForecast' id='forecastContainer3'>
+                                        <div class='currentForecast has-background-info-dark' id='forecastContainer3'>
                                             <div class='forecastIMG'><img></div>
                                             
                                             <div class='forecastHeader'>
@@ -206,7 +208,7 @@
                                     </div>
 
                                     <div class='level-item has-text-centered'>
-                                        <div class='currentForecast'  id='forecastContainer4'>
+                                        <div class='currentForecast has-background-info-dark'  id='forecastContainer4'>
                                             <div class='forecastIMG'><img></div>
                                             
                                             <div class='forecastHeader'>
@@ -239,7 +241,7 @@
                                     </div>
 
                                     <div class='level-item has-text-centered'>
-                                        <div class='currentForecast'  id='forecastContainer5'>
+                                        <div class='currentForecast has-background-info-dark'  id='forecastContainer5'>
                                             <div class='forecastIMG'><img></div>
                                             
                                             <div class='forecastHeader'>
@@ -272,7 +274,7 @@
                                     </div>
 
                                     <div class='level-item has-text-centered'>
-                                        <div class='currentForecast'  id='forecastContainer6'>
+                                        <div class='currentForecast has-background-info-dark'  id='forecastContainer6'>
                                             <div class='forecastIMG'><img></div>
                                             
                                             <div class='forecastHeader'>
@@ -305,7 +307,7 @@
                                     </div>
 
                                     <div class='level-item has-text-centered'>
-                                        <div class='currentForecast'  id='forecastContainer7'>
+                                        <div class='currentForecast has-background-info-dark'  id='forecastContainer7'>
                                             <div class='forecastIMG'><img></div>
                                             
                                             <div class='forecastHeader'>
@@ -345,7 +347,9 @@
                 </div>
             </div>
 
-            <div class='hero-foot'></div>
+            <div class='hero-foot'>
+                <h6> &copy; 3005 Eric Gish</h6>
+            </div>
         </section>
 
         <script type='text/javascript' src='./assets/script.js'></script>

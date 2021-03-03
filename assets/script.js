@@ -5,7 +5,7 @@ let input = document.getElementById('userInput');
 let apiID = 'a3a448809ba0d58d24883ea16e8349fb';
 let query = input.value;
 
-const changeBackground = (time) => {
+const changeBackground = () => {
 // use a switch case statement later to dynamically change the background color
 }
 
@@ -75,7 +75,8 @@ const main = (res) => {
             ampm = hour >= 12 ? 'pm' : 'am';
             hour = hour % 12;
             hour  = hour ? hour : 12;
-        console.log(hour + ampm);
+        console.log(date.getHours());
+        changeBackground(date.getHours());
 
         let temp = Math.floor(array[i].temp),
             descrip = array[i].weather[0].description,
